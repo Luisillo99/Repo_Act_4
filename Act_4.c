@@ -35,7 +35,7 @@ int main()
 	int n;
 	do
 	{
-		printf("1. 5 Numeros Enteros\n2. Funcion Mostrar\n3. Capturar Personaje\n0. Salir\nIngresa un numero: ");
+		printf("1. 5 Numeros Enteros\n2. Funcion Mostrar\n3. Capturar Personaje\n4. Mostrar Personajes\n0. Salir\nIngresa un numero: ");
 		scanf("%c",&op);
 		system("cls");
 		switch(op)
@@ -54,6 +54,9 @@ int main()
 				break;
 			case '3':
 				capturar_personaje();
+				break;
+			case '4':
+				mostrar_personajes();
 				break;
 			default:
 				break;

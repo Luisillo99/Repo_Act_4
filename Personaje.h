@@ -30,5 +30,15 @@ void capturar_personaje()
     else
         printf("Estructura de personajes está llena \n");
 }
-
+void  mostrar_personajes()
+{
+    for(int i=0; i<cont; i++)
+    {
+        printf("Nombre: %s\n",personaje[i].nombre);
+        printf("Tipo: %s\n",personaje[i].tipo);
+        printf("Fuerza: %f\n",personaje[i].fuerza);
+        printf("Salud: %i\n",personaje[i].salud);
+    }
+    
+}
 #endif
