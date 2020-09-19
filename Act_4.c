@@ -3,7 +3,8 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-void capturar_enteros(){
+void capturar_enteros()
+{
 	float numeros[5],a=0;
     for (int i = 0; i < 5; i++)
     {
@@ -19,14 +20,35 @@ void capturar_enteros(){
     printf("Promedio: %.2f\n",a/5.0);
 }
 
-int main(){
+void mostrar(int n, char cadena[])
+{
+	for(int i =0; i<n; i++)
+	{
+		printf("%s", cadena);
+	}
+}
+int main()
+{
   	char op;
-	do{
+	char cadena[20];
+	int n;
+	do
+	{
 		printf("1. 5 Numeros Enteros\n2. Funcion Mostrar\n3. Estructura Personaje\n0. Salir\nIngresa un numero: ");
 		scanf("%c",&op);
-		switch(op){
+		switch(op)
+		{
 			case '1':
                 capturar_enteros();
+				break;
+			case '2':
+				printf("Escribe una cadena de hasta 20 caracteres: ");
+				fflush(stdin);
+				fgets(cadena,sizeof(cadena),stdin);
+				printf("n: ");
+				scanf("%d",&n);
+				system("cls");
+				mostrar(n,cadena);
 				break;
 			default:
 				break;
