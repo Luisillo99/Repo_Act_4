@@ -2,6 +2,7 @@
 
 #include<stdio.h>
 #include<stdlib.h>
+#include"Personaje.h" 
 
 void capturar_enteros()
 {
@@ -34,8 +35,9 @@ int main()
 	int n;
 	do
 	{
-		printf("1. 5 Numeros Enteros\n2. Funcion Mostrar\n3. Estructura Personaje\n0. Salir\nIngresa un numero: ");
+		printf("1. 5 Numeros Enteros\n2. Funcion Mostrar\n3. Capturar Personaje\n0. Salir\nIngresa un numero: ");
 		scanf("%c",&op);
+		system("cls");
 		switch(op)
 		{
 			case '1':
@@ -49,6 +51,9 @@ int main()
 				scanf("%d",&n);
 				system("cls");
 				mostrar(n,cadena);
+				break;
+			case '3':
+				capturar_personaje();
 				break;
 			default:
 				break;
